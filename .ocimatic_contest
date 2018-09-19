@@ -1,1 +1,9 @@
-{}
+{
+    "tasks": [
+        "juego",
+        "bus",
+        "secuencia",
+        "smartwatch",
+        "whitespace"
+    ]
+}
