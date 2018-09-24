@@ -14,40 +14,41 @@
   lleva un registro de todas las actividades que realiza.
   La parte entretenida es que la aplicación propone ciertos desafíos y le otorga
   un premio cada vez que rompe algún récord en alguno de ellos.
-
-  En uno de los desafíos Nicolás puede escoger un entero $K$ y entre todas sus
+  En uno de los desafíos Nicolás puede escoger un entero $M$ y entre todas sus
   actividades la aplicación le dirá el tiempo mínimo en que ha podido recorrer
-  $K$ kilómetros.
+  $M$ metros.
+
   Después de un tiempo ocupando la aplicación, Nicolás se ha dado cuenta que el
   desafío no funciona como él esperaba.
-  Cada vez que empieza una actividad, el reloj guarda el tiempo cada $K$
-  kilómetros recorridos.
-  Por ejemplo, si $K=3$ la aplicación guardará el tiempo en
-  recorrer los primero 3 kilómetros, luego el tiempo entre el kilómetro 3 y
+  Cada vez que empieza una actividad, el reloj guarda el tiempo cada $M$
+  metros recorridos.
+  Por ejemplo, si $M=3$ la aplicación guardará el tiempo en
+  recorrer los primero 3 metros, luego el tiempo entre el metro 3 y
   el 6, entre el 6 y el 9, etc.
   A Nicolás le gustaría que la aplicación considerara todos los intervalos en
-  los que recorrió $K$ kilómetros.
-  Por ejemplo, para $K=3$ otros intervalos posibles podrían ser entre el
-  kilómetro 2 y 5 o entre el 7 y el 10.
+  los que recorrió $M$ metros.
+  Por ejemplo, para $M=3$ otros intervalos posibles podrían ser entre el
+  metro 2 y 5 o entre el 7 y el 10.
 
   Para la suerte de Nicolás el reloj es realmente inteligente y puede
   programarse para añadir nuevas funcionalidades.
   Lamentablemente, Nicolás es realmente malo programando y necesita de tu ayuda.
 
-  Internamente el reloj toma una \emph{muestra} cada segundo y guarda la
-  distancia en \textbf{metros} que fue recorrida durante ese segundo.
+  Internamente, el reloj toma una \emph{muestra} cada segundo y guarda la
+  distancia en metros que fue recorrida durante ese segundo.
   Un intervalo corresponde a un conjunto contiguo de muestras.
-  Como es posible que los intervalos no sumen exactamente $K$ kilómetros, a
-  Nicolás le interesan los intervalos que sean lo más cercano a $K$ kilómetros.
-  Un intervalo \emph{válido} es uno cuya distancia es mayor o igual que $K$ kilómetros,
-  tal que al quitarle la última muestra la distancia queda menor que $K$ kilómetros.
+  Como es posible que los intervalos no sumen exactamente $M$ metros, a
+  Nicolás le interesan los intervalos que sean lo más cercanos posible a $M$
+  metros.
+  Un intervalo \emph{válido} es uno cuya distancia es mayor o igual que $M$ metros,
+  tal que al quitarle la última muestra la distancia queda menor que $M$ metros.
   Dada la descripción de las muestras tu tarea es determinar el intervalo
   válido de menor tiempo.
 
 \end{problemDescription}
 
 \begin{inputDescription}
-  La primera línea de la entrada contiene dos enteros $K$ ($0<K\leq 100$) y $N$
+  La primera línea de la entrada contiene dos enteros $M$ ($0<M\leq 10^5$) y $N$
   ($N > 0$) correspondientes respectivamente al valor que Nicolás ha escogido
   para el desafío y la cantidad de muestras.
   La siguiente línea contiene $N$ enteros correspondientes a la cantidad de
@@ -56,7 +57,8 @@
 \end{inputDescription}
 
 \begin{outputDescription}
-  La salida debe contener un único entero correspondiente al intervalo válido de menor tiempo.
+  La salida debe contener un único entero correspondiente al tiempo en segundos
+  del intervalo válido de menor tiempo.
 \end{outputDescription}
 
 \begin{scoreDescription}
