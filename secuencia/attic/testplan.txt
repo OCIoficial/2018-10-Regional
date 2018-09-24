@@ -10,26 +10,51 @@
 # at the beginning. Arguments should be used to generate a uniquely random seed
 # inside the generator.
 # To generate test cases using test plan use `ocimatic gen-input`
-
+# gen_random.py [C=T+1]? [RT=RC=PT=PC]?
 
 [Subtask 1]
-  # Use sample data as test
-  1 ; copy statement/sample-1.in
-  1 ; copy statement/sample-2.in
-
-  # Manual test case
-  2 ; copy attic/manual-1.in
-
-  # Random tests
-  3 ; random.cpp 10 100
-  3 ; random.cpp 100 1000
-
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
+1     ; gen_random.py 1
 
 [Subtask 2]
-  # Random tests
-  1 ; random.java 10 20 30
-  1 ; random.java 20 30 40
 
-  # More random tests
-  2 ; random.py 1 1000
 
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
+1     ; gen_random.py 0
