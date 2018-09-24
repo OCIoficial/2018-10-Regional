@@ -18,7 +18,9 @@ while max_m > 0 and len(numbers) < max_n:
     if sp == 1:
         m = 1
     elif sp == 2 and m % 2 != 0:
-        m += 1
+        m -= 1
+        if m == 0:
+            m = 2
     elif sp == 3 and m % 2 == 0:
         m -= 1
     numbers.append(m)
@@ -26,4 +28,4 @@ while max_m > 0 and len(numbers) < max_n:
 
 print(len(numbers))
 for elem in numbers:
-    print elem
+    print(elem)
