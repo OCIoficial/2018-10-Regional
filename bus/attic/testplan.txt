@@ -13,6 +13,10 @@
 
 
 [Subtask 1]
+  # Use sample data as test
+  1 ; copy statement/sample-1.in
+  1 ; copy statement/sample-2.in
+
   # type of test -- max M 
   # type 0 is a normal test, 1 is all ones, 2 is all evens, 3 is all odds
   1 ; gen_random.py 0 1
