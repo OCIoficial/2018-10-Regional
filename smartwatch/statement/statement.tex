@@ -2,25 +2,67 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 
-\title{Ejemplo}
+\title{Reloj inteligente}
 
 \begin{document}
 \begin{problemDescription}
-\lipsum[1-3]
+  Hace poco Nicolás se compró un \emph{reloj inteligente}.
+  Ahora cada vez que realiza una actividad deportiva, Nicolás lleva su nuevo
+  reloj pues este le entrega en tiempo real información muy útil como su
+  velocidad o ritmo cardíaco.
+  Por otro lado, su reloj se conecta también con una aplicación en su celular y
+  lleva un registro de todas las actividades que realiza.
+  La parte entretenida es que la aplicación propone ciertos desafíos y le otorga
+  un premio cada vez que rompe algún récord en alguno de ellos.
+
+  En uno de los desafíos Nicolás puede escoger un entero $K$ y entre todas sus
+  actividades la aplicación le dirá el tiempo mínimo en que ha podido recorrer
+  $K$ kilómetros.
+  Después de un tiempo ocupando la aplicación, Nicolás se ha dado cuenta que el
+  desafío no funciona como él esperaba.
+  Cada vez que empieza una actividad, el reloj guarda el tiempo cada $K$
+  kilómetros recorridos.
+  Por ejemplo, si $K=3$ la aplicación guardará el tiempo en
+  recorrer los primero 3 kilómetros, luego el tiempo entre el kilómetro 3 y
+  el 6, entre el 6 y el 9, etc.
+  A Nicolás le gustaría que la aplicación considerara todos los intervalos en
+  los que recorrió $K$ kilómetros.
+  Por ejemplo, para $K=3$ otros intervalos posibles podrían ser entre el
+  kilómetro 2 y 5 o entre el 7 y el 10.
+
+  Para la suerte de Nicolás el reloj es realmente inteligente y puede
+  programarse para añadir nuevas funcionalidades.
+  Lamentablemente, Nicolás es realmente malo programando y necesita de tu ayuda.
+
+  Internamente el reloj toma una \emph{muestra} cada segundo y guarda la
+  distancia en \textbf{metros} que fue recorrida durante ese segundo.
+  Un intervalo corresponde a un conjunto contiguo de muestras.
+  Como es posible que los intervalos no sumen exactamente $K$ kilómetros, a
+  Nicolás le interesan los intervalos que sean lo más cercano a $K$ kilómetros.
+  Un intervalo \emph{válido} es uno cuya distancia es mayor o igual que $K$ kilómetros,
+  tal que al quitarle la última muestra la distancia queda menor que $K$ kilómetros.
+  Dada la descripción de las muestras tu tarea es determinar el intervalo
+  válido de menor tiempo.
+
 \end{problemDescription}
 
 \begin{inputDescription}
-\lipsum[1]
+  La primera línea de la entrada contiene dos enteros $K$ ($0<K\leq 100$) y $N$
+  ($N > 0$) correspondientes respectivamente al valor que Nicolás ha escogido
+  para el desafío y la cantidad de muestras.
+  La siguiente línea contiene $N$ enteros correspondientes a la cantidad de
+  metros en cada intervalo.
+  Todos los enteros serán mayores o iguales que 0 y menores que $10^9$
 \end{inputDescription}
 
 \begin{outputDescription}
-\lipsum[1]
+  La salida debe contener un único entero correspondiente al intervalo válido de menor tiempo.
 \end{outputDescription}
 
 \begin{scoreDescription}
-  \score{10} Restricciones Subtarea1
-  \score{10} Restricciones Subtarea2
-  \score{10} Restricciones Subtarea3
+  \score{20} Se probarán varios casos donde $N<=10^2$
+  \score{30} Se probarán varios casos donde $N<=10^3$
+  \score{50} Se probarán varios casos donde $N<=10^6$
 \end{scoreDescription}
 
 \begin{sampleDescription}
