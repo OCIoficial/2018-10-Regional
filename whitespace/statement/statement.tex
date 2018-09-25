@@ -1,26 +1,35 @@
 \documentclass{oci}
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
+\usepackage{amsmath,amsthm,amsfonts, amssymb}
+\usepackage{tikz}
 
-\title{Ejemplo}
+\title{Whitespace}
 
 \begin{document}
 \begin{problemDescription}
-\lipsum[1-3]
+Los organizadores de las olimpiadas de informática adoran hacer sufrir a los competidores. Para variar esta no es la excepción. Había una vez una hoja de cálculo donde cada línea seguía el formato:
+
+$$n\ a_1\ a_2\ \dots\ a_n\ suma$$
+
+es decir, cada línea comenzaba con un entero positivo $n$, luego le seguían $n$ enteros $a_1, a_2, \dots a_n$ y finalmente un entero $suma$ correspondiente a la suma de los $n$ números. Originalmente todos estos números estaban separados entre sí por espacios en blanco. Uno de los organizadores pensó que sería muy divertido remover todos los espacios en blanco y encargarles a los desdichados competidores recuperarlos. Obviamente los demás organizadores estuvieron de acuerdo. ¿Te animas a hacerlo?
 \end{problemDescription}
 
 \begin{inputDescription}
-\lipsum[1]
+La entrada consiste un único string de dígitos decimales siguiendo el formato:
+$$n a_1 a_2 \dots a_n suma$$
+es decir, una línea de la hoja de cáculo original pero con los espacios en blanco removidos. Todos los números son enteros, n siempre es positivo y ningún número está escrito con ceros a la izquierda.
 \end{inputDescription}
 
 \begin{outputDescription}
-\lipsum[1]
+La salida debe seguir el formato:
+$$n\ a_1\ a_2\ \dots\ a_n\ suma$$
+es decir, la línea original con los espacios en blanco recuperados. Está garantizado que sólo existe una única forma válida de separar los números.
 \end{outputDescription}
 
 \begin{scoreDescription}
-  \score{10} Restricciones Subtarea1
-  \score{10} Restricciones Subtarea2
-  \score{10} Restricciones Subtarea3
+  \score{50} $n = 3$ siempre, largo del string es $<= 2000$, y los números pueden ser bien grandes :)
+  \score{50} sin restricciones para $n$, pero el largo del string es $<= 28$, y todos los números son $ <= 10^{18}$
 \end{scoreDescription}
 
 \begin{sampleDescription}
