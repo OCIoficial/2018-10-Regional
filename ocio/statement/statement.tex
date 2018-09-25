@@ -76,6 +76,9 @@ pero si $M = 18$, tan sólo se podrían escribir $4$ números.
 	\node at (16+0.5,0.5) {${\color{red}2}$};
 	\node at (17+0.5,0.5) {${\color{red}2}$};
 	\node at (18+0.5,0.5) {${\color{red}1}$};
+%	\foreach \i in {13,...,18}{
+%		\draw [-] (\i+0.2,0.2) -- (\i+0.8,0.8);
+%	}	
 	\end{tikzpicture}
 \end{center}
 
@@ -92,8 +95,8 @@ La salida es un entero que describe la cantidad de números de la secuencia que 
 \end{outputDescription}
 
 \begin{scoreDescription}
-  \score{40} $0 \leq M \leq 100$
-  \score{60} $0 \leq M \leq 10^6$
+  \score{30} $0 < M \leq 50$
+  \score{70} $0 < M \leq 10^5$
 \end{scoreDescription}
 
 \begin{sampleDescription}

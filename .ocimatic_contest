@@ -2,8 +2,8 @@
     "tasks": [
         "juego",
         "bus",
-        "secuencia",
-        "smartwatch",
+        "ocio",
+        "reloj",
         "whitespace"
     ]
 }
