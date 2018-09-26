@@ -6,7 +6,11 @@
 
 \begin{document}
 \begin{problemDescription}
+Comcap decidió gastarse sus últimos ahorros aprendiendo a programar, pues es una habilidad increiblemente útil para la vida. Tristemente se dio cuenta de que no le queda un peso para agregar su nueva habilidad a su curriculum y no lo aceptan en ningún trabajo sin ella. Por esto, Comcap decidió visitar el casino clandestino de la ciudad, donde puedes jugarte hasta tu vida.
 
+Ya en el casino, Comcap determinó que había un solo juego en el que puedes ganar sin tener suerte, pero se debe tener un poder de procesamiento de información enorme para ganar. 
+
+El juego se llama $Mega oci X$
 La idea es un juego donde se tiene un pasillo de largo n. Se tiene un personaje (el jugador) que comienza en una posición $x$ de la matriz. También hay $k$ lasers pegados a las paredes del pasillo con posiciones $a_i$, con $0\leq i<k$. Los lasers vienen de a pares, uno en cada lado del pasillo, y disparan un rayo recto.
 
 La idea es que los lasers se desplazan en el pasillo de forma continua. Cada laser tiene un entero $m_i$ que indica la cantidad de bloques que avanza cada segundo, y un entero $c_i$,1 o -1, que indica la orientación del laser, es decir, si avanza en la matriz o retrocede respectivamente. También, cada laser dispara cada segundo \textbf{ENTERO} (en el segundo 0 no disparan). Agregaré que los lasers $desaparecen$ una vez que salen de la matriz.
@@ -33,7 +37,7 @@ La salida consiste en una palabra, $SI$ o $NO$, dependiendo de si el jugador gan
   \score{30} $1\leq m_i, L, n\leq 10^{6}$, $0\leq k\leq 50$
   \score{30} $1\leq m_i, L, n\leq 10^{15}$, $0\leq k\leq 10^5$
 \end{scoreDescription}
-
+Siempre se cumple que $0\leq x<n$
 \begin{sampleDescription}
 \sampleIO{sample-1}
 \sampleIO{sample-2}
