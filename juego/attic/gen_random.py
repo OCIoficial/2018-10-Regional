@@ -43,7 +43,7 @@ L_r=int(sys.argv[11])
 onX=int(sys.argv[12])
 
 n=random.randint(n_l, n_r)
-x=random.randint(1, onX)
+x=random.randint(1, min(onX, n-1))
 L=random.randint(L_l, min(n-x, L_r))
 k=random.randint(k_l, k_r)
 
