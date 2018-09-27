@@ -10,13 +10,23 @@
 # at the beginning. Arguments should be used to generate a uniquely random seed
 # inside the generator.
 # To generate test cases using test plan use `ocimatic gen-input`
-
+# Subtask(0, 1, 2) Answer(0, 1, 2) n_l n_r k_l k_r m_l m_r L_l L_r onX
 
 [Subtask 1]
   # Use sample data as test
   1 ; copy statement/sample-1.in
   1 ; copy statement/sample-2.in
-
+  #Other tests
+  1 ; gen_random.py 0 0 100 1000 1 1 1 1 1 1 
+  1 ; gen_random.py 0 0 100 1000 
+  1 ; gen_random.py 0 0 100 1000 
+  1 ; gen_random.py 0 0 100 1000 
+  1 ; gen_random.py 0 1 100 1000 
+  1 ; gen_random.py 0 1 100 1000 
+  1 ; gen_random.py 0 1 100 1000 
+  1 ; gen_random.py 0 1 100 1000 
+  1 ; gen_random.py 0 2 100 1000 
+  1 ; gen_random.py 0 2 100 1000 
   # Manual test case
   2 ; copy attic/manual-1.in
 
@@ -32,4 +42,8 @@
 
   # More random tests
   2 ; random.py 1 1000
+  
+[Subtask 3]
+  1 ; gen_random.py 
+[Subtask 4]
 
