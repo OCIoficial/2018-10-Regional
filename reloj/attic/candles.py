@@ -1,9 +1,10 @@
 """
 candles.py receives the desired values for M, N and a list of candles. Each
 candle starts in the position passed in sys.argv[i] (inclusive), has height
-sys.argv[i+1] and ends in the position sys.argv[i+2] (not inclusive). The
-first position is always 0 so it is omitted, and the last position is always
-N so it is omitted too. Example:
+sys.argv[i+1] and ends in the position sys.argv[i+2] (not inclusive). All
+candles are consecutive so the ending position of one candle is the starting
+position of the next. The first position is always 0 so it is omitted, and
+the last position is always N so it is omitted too. Example:
 
 $ python candles.py 12 10 2 4 1 7 3
 
