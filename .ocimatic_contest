@@ -1,9 +1,9 @@
 {
     "tasks": [
         "ultrawoman",
+        "sumas",
         "bus",
         "ocio",
-        "reloj",
-        "whitespace"
+        "reloj"
     ]
 }
