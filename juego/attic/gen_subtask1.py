@@ -59,4 +59,5 @@ else:
     while i<R:
         wi=random.randint(0, n-1)
         print(str(wi)+" "+str(vi))
+        i=i+1
         
