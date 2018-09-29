@@ -10,7 +10,7 @@ int main() {
   int sum = 0;
 
   for (int i = 0; i < N; i++) {
-   sum += inf.readInt(0, 100, "A_i");
+   sum += inf.readInt(1, 100, "A_i");
    inf.readEoln();
   }
   
