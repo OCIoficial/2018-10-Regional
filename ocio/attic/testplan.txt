@@ -12,7 +12,7 @@
 # To generate test cases using test plan use `ocimatic gen-input`
 # gen_random.py [C=T+1]? [RT=RC=PT=PC]?
 
-[Subtask 1]
+[Subtask 1 - validators/st1.cpp]
 1     ; echo 1
 1     ; echo 2
 1     ; echo 3
@@ -32,7 +32,7 @@
 1     ; echo 43
 1     ; echo 42
 
-[Subtask 2]
+[Subtask 2 - validators/st2.cpp]
 
 1     ; echo 100000
 1     ; echo 99999
