@@ -12,7 +12,7 @@
 # To generate test cases using test plan use `ocimatic gen-input`
 
 
-[Subtask 1]
+[Subtask 1 - validators/st1.cpp]
   1 ; candles.py 100000 100 999999999
   2 ; candles.py 30 1 42
   3 ; candles.py 1 100 0 99 1
@@ -24,7 +24,7 @@
   4 ; candles.py 99999 100 3000 68 5000 88 0 90 5000
 
 
-[Subtask 2]
+[Subtask 2 - validators/st2.cpp]
   1 ; candles.py 100000 1000 999999999
   2 ; candles.py 30 1 42
   3 ; candles.py 1 1000 0 999 1
@@ -36,7 +36,7 @@
   4 ; candles.py 99999 1000 300 680 500 880 0 900 500
 
 
-[Subtask 3]
+[Subtask 3 - validators/st3.cpp]
   1 ; candles.py 100000 1000000 999999999
   2 ; candles.py 30 1 42
   3 ; candles.py 1 1000000 0 999999 1
