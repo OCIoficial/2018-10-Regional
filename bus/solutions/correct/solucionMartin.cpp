@@ -11,7 +11,7 @@ while(a<n){
 	      if(b%2!=0 and b!=1){contador++;}
 	      a++;
           }
-cout<<contador;
+cout<<contador << "\n";
 
 return 0;            
 }

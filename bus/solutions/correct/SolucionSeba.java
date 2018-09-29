@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Program
+class bus
 {
 
 	public static void main(String[] args) {
