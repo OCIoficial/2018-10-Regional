@@ -41,7 +41,8 @@
   Nicolás le interesan los intervalos que sean lo más cercanos posible a $M$
   metros.
   Un intervalo \emph{válido} es uno cuya distancia es mayor o igual que $M$ metros,
-  tal que al quitarle la última muestra la distancia queda menor que $M$ metros.
+  tal que al quitarle la muestra de más a la derecha la distancia queda menor
+  que $M$ metros.
   Dada la descripción de las muestras tu tarea es determinar el intervalo
   válido de menor tiempo.
 
@@ -53,12 +54,14 @@
   para el desafío y la cantidad de muestras.
   La siguiente línea contiene $N$ enteros correspondientes a la cantidad de
   metros en cada intervalo.
-  Todos los enteros serán mayores o iguales que 0 y menores que $10^9$
+  Todos los enteros serán mayores o iguales que 0 y menores o iguales que $100$.
 \end{inputDescription}
 
 \begin{outputDescription}
   La salida debe contener un único entero correspondiente al tiempo en segundos
   del intervalo válido de menor tiempo.
+  Se garantiza que habrá al menos un intervalo válido, es decir, la suma de
+  tomas las muestras será mayor o igual que $M$.
 \end{outputDescription}
 
 \begin{scoreDescription}

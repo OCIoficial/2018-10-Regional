@@ -1,9 +1,9 @@
 {
     "tasks": [
-        "juego",
+        "ultrawoman",
+        "sumas",
         "bus",
         "ocio",
-        "reloj",
-        "whitespace"
+        "reloj"
     ]
 }

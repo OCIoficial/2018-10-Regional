@@ -13,30 +13,39 @@
 # gen_random.py [C=T+1]? [RT=RC=PT=PC]?
 
 [Subtask 1]
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
-1     ; gen_random.py 1
+1     ; echo 1
+1     ; echo 2
+1     ; echo 3
+1     ; echo 4
+1     ; echo 18
+1     ; echo 19
+1     ; echo 20
+1     ; echo 21
+1     ; echo 50
+1     ; echo 41
+1     ; echo 49
+1     ; echo 48
+1     ; echo 47
+1     ; echo 46
+1     ; echo 45
+1     ; echo 44
+1     ; echo 43
+1     ; echo 42
 
 [Subtask 2]
 
-
-1     ; gen_random.py 0
-1     ; gen_random.py 0
+1     ; echo 100000
+1     ; echo 99999
+1     ; echo 99998
+1     ; echo 42313
+1     ; echo 42314
+1     ; echo 42312
+1     ; echo 93865
+1     ; echo 93864
+1     ; echo 93863
+1     ; echo 71974
+1     ; echo 71973
+1     ; echo 71972
 1     ; gen_random.py 0
 1     ; gen_random.py 0
 1     ; gen_random.py 0

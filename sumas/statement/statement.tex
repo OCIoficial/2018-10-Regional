@@ -1,0 +1,65 @@
+\documentclass{oci}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{amsmath,amsthm,amsfonts, amssymb}
+\usepackage{tikz}
+
+\title{Sumas}
+
+\begin{document}
+\begin{problemDescription}
+Gabriela necesita ahorrar mucho dinero.
+Es por esto que pasa todo el día haciendo cálculos para saber cuanto dinero
+ha gastado.
+Las cálculos de Gabriela son muy simples, dada una lista de números $a_1, a_2,
+\dots, a_n$ debe sumarlos para obtener un valor $S$.
+
+Gabriela mantiene en su libreta un registro de todas las sumas que ha hecho,
+pero ella no quiere que la gente sepa cuanto dinero ha gastado.
+Es por esto que diseñó una estrategia para poder ocultarlo.
+Su estrategia consiste en anotar los números en sus sumas sin escribir
+ningún signo o espacio de separación.
+Por ejemplo, si la suma es $1111+2222+3333=6666$ ella escribe el siguiente
+registro en su libreta $1111222233336666$.
+A Gabriela le interesa poder recuperar la suma original, es por esto que
+para facilitarlo decidió también agregar al principio de sus registros la
+cantidad de sumandos en la operación.
+Para el ejemplo anterior la cantidad de sumandos es $3$ y por lo tanto el
+registro final que Gabriela escribe en su libreta es $31111222233336666$
+
+Por casualidad acabas de recibir en tus manos la libreta de Gabriela.
+?`Crees ser capaz de descifrar sus cálculos?
+\end{problemDescription}
+
+\begin{inputDescription}
+La entrada consiste en una línea conteniendo una cadena de largo $M$ formada
+únicamente por los siguientes caracteres $\{1,2,3,4,5,6,7,8,9\}$ (no contiene el
+$0$).
+Esta cadena corresponde a uno de los registros de Gabriela, es decir, para
+alguna lista de números $a_1,a_2\dots a_n$ cuya suma es $S$, la línea tendrá el
+formato:
+$$n a_1 a_2 \dots a_nS$$
+Se garantiza que la suma tiene al menos dos sumandos ($n\geq 2$) y que todos los
+números son menores o iguales que $10^9$.
+\end{inputDescription}
+
+\begin{outputDescription}
+La salida debe contener el registro de Gabriela agregando espacios 
+entremedio de los números, es decir, debe tener el formato:
+$$n\textvisiblespace a_1\textvisiblespace a_2\textvisiblespace
+\dots\textvisiblespace a_n\textvisiblespace S$$
+Está garantizado que siempre existe forma válida de separar el registro y que
+esta es siempre única.
+\end{outputDescription}
+
+\begin{scoreDescription}
+  \score{40} Se probarán varios casos donde $M\leq 15$.
+  \score{60} Se probarán varios casos donde $M\leq 28$.
+\end{scoreDescription}
+
+\begin{sampleDescription}
+\sampleIO{sample-1}
+\sampleIO{sample-2}
+\end{sampleDescription}
+
+\end{document}

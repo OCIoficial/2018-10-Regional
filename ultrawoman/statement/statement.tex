@@ -1,0 +1,153 @@
+\documentclass{oci}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tabularx}
+
+\title{Ejemplo}
+
+\newcommand{\megawoman}[2]{%
+\node (megawoman) at ($(#1, 0)+(0.5, 0.21)$) {\scalebox{0.2}{\includegraphics{megawoman}}};
+\path[->, darkgray] ($(megawoman)+(.07, 0)$) edge node[above,yshift=-2] {\scalebox{0.65}{$#2$}} ($(megawoman) + (0.6, 0)$)
+}
+
+\newcommand{\robot}[4]{%
+\node (#1) at ($(#2, 0)+(0.5, 0.7)$) {\scalebox{0.1}{\includegraphics{robot}}};
+\path[->, darkgray] ($(#1)+#3*(.08, 0)$) edge node[above,yshift=-2] {\scalebox{0.65}{$#4$}} ($(#1) + #3*(0.6, 0)$)
+}
+\newcommand{\grid}[1]{%
+\draw[step=1.0,gray,thin] (0,0) grid ($(#1, 0)+(1,1)$);
+\foreach \i in {0,...,#1}{
+  \node at (\i+0.5,-0.2) {\scalebox{0.6}{$\i$}};
+}
+}
+\newcommand{\bomb}[1]{%
+\node at ($(#1, 0)+(0.5, 0.38)$) {\scalebox{0.2}{\includegraphics{bomb}}}
+}
+\newcommand*{\tabbox}[2][t]{\vspace{-10pt}\parbox[#1][4.3\baselineskip]{20em}{\strut#2\strut}}
+\newcolumntype{A}{>{\footnotesize}m{.5\textwidth} }
+\newcolumntype{B}{>{\vspace{10pt}}m{.45\textwidth} }
+
+\begin{document}
+\begin{problemDescription}
+La reconocida empresa de videojuegos Jockeycom está desarrollando una nueva
+entrega de su aclamada franquicia Megawoman.
+En esta nueva versión, la heroína, Mega Woman, debe atravesar un escenario
+plagado de robots bombarderos y así poder salvar a su amigo Uno.
+
+El escenario está compuesto de $N$ casillas numeradas de 0 a $N-1$ y contiene
+$R$ robots numerados de 0 a $R-1$.
+Mega Woman corre siempre hacia la derecha a una velocidad constante de $v$
+casillas por segundo.
+Cada robot vuela por el escenario en una sola dirección, ya sea izquierda o
+derecha, a una velocidad constante $u_i$.
+El objetivo de Ultra Woman es escapar del escenario lográndolo cuando su
+posición está más a la derecha que la última casilla.
+
+Al comienzo de cada segundo, exceptuando el segundo inicial, los robots lanzan
+una bomba en la casilla en la que están.
+Si en ese momento Ultra Woman se encuentra dentro de la misma casilla será
+alcanzada por la bomba y perderá el juego.
+Los robots solo lanzan una bomba al inicio de cada segundo y, por lo tanto,
+Ultra Woman puede pasar por debajo de ellos si lo hace en el momento indicado.
+
+Dada la posición inicial de Ultra Woman y la de cada uno de los robots, a los
+desarrolladores de Jockeycom les gustaría determinar si es posible para Ultra
+Woman escapar del escenario sin ser alcanzada por una bomba.
+?`Podrías ayudarlos?
+
+La siguiente tabla muestra segundo a segundo un ejemplo de un escenario donde
+Ultra Woman puede escapar del escenario sin ser alcanzada por una bomba.
+La flechas indican la velocidad de cada uno de los personajes.
+
+\begin{tabular}{|A|B|}
+\hline
+En el momento inicial los robots no lanzan bombas y por lo tanto Ultra Woman no
+es alcanzada por ninguna.
+&
+\begin{tikzpicture}[scale=1.2]
+\megawoman{2}{2};
+\robot{r1}{2}{-1}{1};
+\robot{r2}{0}{1}{5};
+\robot{r3}{5}{-1}{2};
+\grid{5};
+\end{tikzpicture}
+\\
+\hline
+Tanto Ultra Woman como los robots se han movido la cantidad de casillas
+correspondientes a su velocidad.
+Adicionalmente todos los robots lanzan su bomba, pero Ultra Woman no es
+alcanzada por ninguna.
+&
+\begin{tikzpicture}[scale=1.2]
+\megawoman{4}{2};
+\robot{r1}{1}{-1}{1};
+\bomb{1};
+\robot{r2}{5}{1}{5};
+\bomb{5};
+\robot{r3}{3}{-1}{2};
+\bomb{3};
+\grid{5};
+\end{tikzpicture}
+\\
+\hline
+Ultra Woman logró salir del escenario sin ser alcanzada por una bomba.
+&
+\begin{tikzpicture}[scale=1.2]
+\robot{r1}{0}{-1}{1};
+\robot{r3}{1}{-1}{2};
+\grid{5};
+\end{tikzpicture}
+\\
+\hline
+\end{tabular}
+
+\end{problemDescription}
+
+\begin{inputDescription}
+  La entrada está descrita en varias líneas.
+  La primera contiene un entero $N$ ($N>0$), correspondiente a la cantidad de
+  casillas en el escenario.
+  La siguiente línea contiene dos enteros $w$ y $v$ ($0\leq w< N, 0<v\leq 10^9$)
+  correspondientes a la casilla donde se encuentra inicialmente Ultra Woman y a la
+  velocidad con la que se mueve.
+  Posteriormente viene una línea con un entero $R$ indicando la cantidad de
+  robots en el escenario.
+  A continuación siguen $R$ filas describiendo cada uno de los robots.
+  Cada fila contiene dos enteros $r_i$ y $u_i$ ($0\leq 0 < N, |u_i|< 10^9$),
+  correspondientes respectivamente a la posición inicial y a la velocidad del
+  robot.
+  La velocidad será positiva si el robot se mueve hacia la derecha y negativa si
+  se mueve hacia la izquierda.
+\end{inputDescription}
+
+\begin{outputDescription}
+La salida debe corresponder a una única línea conteniendo la palabra \texttt{SI}
+en el caso que sea posible para Ultra Woman escapar del escenario o \texttt{NO}
+en caso contrario.
+\end{outputDescription}
+
+\begin{scoreDescription}
+  \score{20} Se probarán varios casos donde la velocidad de Ultra Woman es 1,
+  todos los robots se mueven hacia la derecha con velocidad 2 y tanto la
+  cantidad de casillas como de robots es menor o igual que $10^5$ ($u_i=2, v=1,
+  0\leq R\leq 10^5, N\leq 10^5$).
+  \score{20} Se probarán varios casos donde la velocidad de Ultra Woman es 1,
+  todos los robots se mueven hacia la izquierda con velocidad 1 y tanto
+  de casillas como de robots es menor que $10^5$ ($u_i=1, v=1, 0\leq R\leq 10^5,
+  N\leq 10^5$).
+  \score{25} Se probarán varios casos en que el número de robots es menor que
+  50, el número de casillas es menor o igual que $10^5$ y sin restricciones sobre las
+  velocidades ($0\leq R\leq 50, N\leq 10^5$).
+  \score{35} Se probarán varios donde el número de robots es menor o igual que
+  $10^5$, la cantidad de casillas es menor o igual que $10^{12}$ y sin
+  restricciones sobre las velocidades ($0\leq R\leq 10^5, N \leq10^{12}$).
+\end{scoreDescription}
+
+\begin{sampleDescription}
+\sampleIO{sample-1}
+\sampleIO{sample-2}
+\end{sampleDescription}
+
+\end{document}
