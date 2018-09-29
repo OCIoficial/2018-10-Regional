@@ -12,7 +12,7 @@ bool check(const vector<long> &vec) {
   return sum == vec[vec.size() - 1];
 }
 
-bool sol(const string &s, vector<long> &vec, int n, uint i, int r=0) {
+bool sol(const string &s, vector<long> &vec, int n, uint i) {
   if (n == 0) {
     if (s.size() - i > 9)
       return false;
@@ -24,7 +24,7 @@ bool sol(const string &s, vector<long> &vec, int n, uint i, int r=0) {
   }
   for (uint j = 1; j < min(9u, int(s.size()) - i); ++j) {
     vec.push_back(stoi(s.substr(i, j)));
-    if (sol(s, vec, n - 1, i + j, r + 1))
+    if (sol(s, vec, n - 1, i + j))
       return true;
     vec.pop_back();
   }
