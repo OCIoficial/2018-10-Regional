@@ -22,7 +22,7 @@ bool sol(const string &s, vector<long> &vec, int n, uint i) {
     vec.pop_back();
     return false;
   }
-  for (uint j = 1; j < min(9u, int(s.size()) - i); ++j) {
+  for (uint j = 1; j <= min(9u, int(s.size()) - i - 1); ++j) {
     vec.push_back(stoi(s.substr(i, j)));
     if (sol(s, vec, n - 1, i + j))
       return true;
