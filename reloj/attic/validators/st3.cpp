@@ -21,14 +21,14 @@ int main() {
   long long sum = 0LL;
 
   for (int i = 1; i < N; i++) {
-    sum += inf.readInt(0, 999999999, "m");
+    sum += inf.readInt(0, 100, "m");
     inf.readSpace();
   }
 
-  sum += inf.readInt(0, 999999999, "m");
+  sum += inf.readInt(0, 100, "m");
   inf.readEoln();
 
-  ensuref(sum > M, "Problema debe tener solución.");  
+  ensuref(sum > M, "Problema debe tener solución.");
 
   inf.readEof();
   return 0;
