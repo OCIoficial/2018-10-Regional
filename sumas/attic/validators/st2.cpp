@@ -39,6 +39,8 @@ int main() {
   long sum = 0;
   for (uint i = 1; i <= 2; ++i) {
     int n = stoi(s.substr(0, i));
+    if (n == 1)
+      continue;
     vector<long> vec;
     sum += count(s, vec, n, i);
   }
