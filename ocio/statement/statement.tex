@@ -4,7 +4,7 @@
 \usepackage{amsmath,amsthm,amsfonts, amssymb}
 \usepackage{tikz}
 
-\title{Ocio}
+\title{El juego del OCIo}
 
 \begin{document}
 \begin{problemDescription}
@@ -15,13 +15,14 @@ Para matar el tiempo deciden jugar al juego del OCIo.
 
 El juego del OCIo consiste en encontrar los números de una secuencia.
 La secuencia comienza siempre con el número $1$.
-Luego alguien lee en voz alta lo que ve, "un uno", y lo escribe como el
+Luego alguien lee en voz alta lo que ve, ``un uno'', y lo escribe como el
 siguiente número en la secuencia, es decir, escribe $11$.
-Luego otro jugador lee en voz alta el resultado del paso anterior, "dos unos", y
-lo escribe $21$, luego el jugador siguiente lee "un dos, un uno" y lo escribe
+Luego otro jugador lee en voz alta el resultado del paso anterior, ``dos unos'', y
+lo escribe: $21$.
+Posteriormente el jugador siguiente lee ``un dos, un uno'' y lo escribe:
 $1211$.
 Los OCIosos jugadores continúan de esta forma, en cada paso leyendo en voz alta
-lo que leen en el paso anterior y luego escribiéndolo.
+el resultado del paso anterior y luego escribiéndolo.
 Los primeros 9 números de la secuencia en el juego del OCIo son los siguientes:
 
 $$1, 11, 21, 1211, 111221, 312211, 13112221, 1113213211, 31131211131221$$ 
@@ -98,7 +99,7 @@ pero si $M = 18$, tan sólo se podrían escribir $4$ números.
 	\end{tikzpicture}
 \end{center}
 
-Ayuda a los Ociosos jugadores a encontrar la respuesta que buscan!
+!`Ayuda a los Ociosos jugadores a encontrar la respuesta que buscan!
 
 \end{problemDescription}
 
@@ -108,7 +109,7 @@ La entrada consiste en un entero $M$ que describe el tamaño de la memoria.
 
 \begin{outputDescription}
 La salida debe contener un único entero correspondiente a la cantidad de números
-de la secuencia que pueden escribirse en la memoria.
+de la secuencia que pueden escribirse completamente en la memoria.
 \end{outputDescription}
 
 \begin{scoreDescription}

@@ -35,10 +35,12 @@ int main() {
   inf.readLineTo(s);
   ensuref(s.size() <= 15, "Cadena debe tener largo menor o igual que 15");
   for (char c : s)
-    ensuref('1' <= c and c <= '9', "La cadena debe contener solo digitos excluyedo el cero");
+    ensuref('1' <= c and c <= '9', "La cadena debe contener solo digitos excluyendo el cero");
   long sum = 0;
   for (uint i = 1; i <= 2; ++i) {
     int n = stoi(s.substr(0, i));
+    if (n == 1)
+      continue;
     vector<long> vec;
     sum += count(s, vec, n, i);
   }

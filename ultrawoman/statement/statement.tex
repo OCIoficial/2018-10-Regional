@@ -5,7 +5,7 @@
 \usetikzlibrary{calc}
 \usepackage{tabularx}
 
-\title{Ejemplo}
+\title{Mega Woman}
 
 \newcommand{\megawoman}[2]{%
 \node (megawoman) at ($(#1, 0)+(0.5, 0.21)$) {\scalebox{0.2}{\includegraphics{megawoman}}};
@@ -115,7 +115,7 @@ Ultra Woman logró salir del escenario sin ser alcanzada por una bomba.
   Posteriormente viene una línea con un entero $R$ indicando la cantidad de
   robots en el escenario.
   A continuación siguen $R$ filas describiendo cada uno de los robots.
-  Cada fila contiene dos enteros $r_i$ y $u_i$ ($0\leq 0 < N, |u_i|< 10^9$),
+  Cada fila contiene dos enteros $r_i$ y $u_i$ ($0\leq r_i < N, |u_i|< 10^9$),
   correspondientes respectivamente a la posición inicial y a la velocidad del
   robot.
   La velocidad será positiva si el robot se mueve hacia la derecha y negativa si
@@ -134,7 +134,7 @@ en caso contrario.
   cantidad de casillas como de robots es menor o igual que $10^5$ ($u_i=2, v=1,
   0\leq R\leq 10^5, N\leq 10^5$).
   \score{20} Se probarán varios casos donde la velocidad de Ultra Woman es 1,
-  todos los robots se mueven hacia la izquierda con velocidad 1 y tanto
+  todos los robots se mueven hacia la izquierda con velocidad 1 y tanto la cantidad
   de casillas como de robots es menor que $10^5$ ($u_i=1, v=1, 0\leq R\leq 10^5,
   N\leq 10^5$).
   \score{25} Se probarán varios casos en que el número de robots es menor que
