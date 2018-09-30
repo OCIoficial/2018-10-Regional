@@ -45,7 +45,7 @@ bool solve(int k, int i, ll acc, int nd) {
 int main() {
     string line; cin >> line;
 
-    clock_t begin = clock();
+    // clock_t begin = clock();
     n = line.size();
     rep(i,0,n-1) digits[i] = line[i] - '0';
     rep(i,0,1) {
@@ -63,8 +63,8 @@ int main() {
     }
     cout << endl;
 
-    clock_t end = clock();
-    double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    cout << "elapsed secs: " << elapsed_secs << end;
+    // clock_t end = clock();
+    // double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+    // cout << "elapsed secs: " << elapsed_secs << end;
     return 0;
 }

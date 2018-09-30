@@ -1,0 +1,60 @@
+# This is a sample test plan.
+# Every line specifies a command to generate a test case.
+# The first column specifies a group name.
+# The second column specifies a command to generate the test case, it could be
+# either a `copy` command or a generator with its respective arguments.
+# A `copy` command expects a path to a file relatively to the task root.
+# A generator could be a source file in Java, C++ or Python, which is compiled
+# and executed with the specified arguments.
+# Additionally, an argument which is different for every test case, is passed
+# at the beginning. Arguments should be used to generate a uniquely random seed
+# inside the generator.
+# To generate test cases using test plan use `ocimatic gen-input`
+
+
+[Subtask 1]
+  # Use sample data as test
+  1 ; copy statement/sample-2.in
+
+  # Manual test case
+  2 ; echo 51255417
+  2 ; echo 457939472736167
+  2 ; echo 81337328532
+
+  # Random tests
+  3 ; gen_random.py 1 15
+  3 ; gen_random.py 2 15
+  3 ; gen_random.py 3 15
+  3 ; gen_random.py 4 15
+  3 ; gen_random.py 5 15
+  3 ; gen_random.py 6 15
+  3 ; gen_random.py 7 15
+  3 ; gen_random.py 8 15
+  3 ; gen_random.py 9 15
+  3 ; gen_random.py 10 15
+  3 ; gen_random.py 11 15
+
+
+[Subtask 2]
+  # Use sample data as test
+  1 ; copy statement/sample-1.in
+
+  # Manual test case  
+  2 ; echo 22111111111111111111111122
+  2 ; echo 231111111111111111111111123
+  2 ; echo 2411111111111111111111111124
+  2 ; echo 1113138365967299
+  2 ; echo 1112614265711639155492729535
+
+  # Random tests
+  3 ; gen_random.py 1 28
+  3 ; gen_random.py 2 28
+  3 ; gen_random.py 3 28
+  3 ; gen_random.py 4 28
+  3 ; gen_random.py 5 28
+  3 ; gen_random.py 6 28
+  3 ; gen_random.py 7 28
+  3 ; gen_random.py 8 28
+  3 ; gen_random.py 9 28
+  3 ; gen_random.py 11 28
+  3 ; gen_random.py 12 28
