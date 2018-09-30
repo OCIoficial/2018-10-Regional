@@ -30,7 +30,7 @@ def has_zeroes(x):
     while x > 0:
         if x % 10 == 0:
             return True
-        x /= 10
+        x //= 10
     return False
 
 def search(target_sum, k_addends, nd_left, testcase):
