@@ -53,7 +53,7 @@ def search(target_sum, k_addends, nd_left, testcase):
             testcase.append(num)
             return True
     
-    if k_addends < 2 or has_zeroes(target_sum):
+    if k_addends < 2 or has_zeroes(k_addends) or has_zeroes(target_sum):
         return False
     
     testcase.append(k_addends)
@@ -96,6 +96,7 @@ def validate_testcase(testcase, maxlen):
     assert n == testcase[0] + 2
     assert sum(testcase[i] for i in range(1, n-1)) == testcase[n-1]
     assert all(x < LIMIT for x in testcase)
+    # print('testcase = ', testcase) # DEBUGGING
     assert all(not has_zeroes(x) for x in testcase)
     digits = [int(c) for c in ''.join(map(str,testcase))]
     assert len(digits) <= maxlen
