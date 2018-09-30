@@ -28,7 +28,7 @@ int main() {
   sum += inf.readInt(0, 100, "m");
   inf.readEoln();
 
-  ensuref(sum > M, "Problema debe tener solución.");
+  ensuref(sum >= M, "Problema debe tener solución.");
 
   inf.readEof();
   return 0;
