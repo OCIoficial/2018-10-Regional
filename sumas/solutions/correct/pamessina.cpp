@@ -39,7 +39,7 @@ bool solve(int k, int i, ll acc, int nd) {
             return true;
         }
     }
-    return false;    
+    return false;
 }
 
 int main() {
