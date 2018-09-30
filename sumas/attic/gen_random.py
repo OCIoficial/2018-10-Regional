@@ -94,6 +94,7 @@ def count_valid_solutions(digits, k, i, acc, nd, n):
 def validate_testcase(testcase, maxlen):
     n = len(testcase)
     assert n == testcase[0] + 2
+    assert testcase[0] > 1
     assert sum(testcase[i] for i in range(1, n-1)) == testcase[n-1]
     assert all(x < LIMIT for x in testcase)
     # print('testcase = ', testcase) # DEBUGGING
