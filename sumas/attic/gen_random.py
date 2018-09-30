@@ -96,6 +96,7 @@ def validate_testcase(testcase, maxlen):
     assert n == testcase[0] + 2
     assert sum(testcase[i] for i in range(1, n-1)) == testcase[n-1]
     assert all(x < LIMIT for x in testcase)
+    assert all(not has_zeroes(x) for x in testcase)
     digits = [int(c) for c in ''.join(map(str,testcase))]
     assert len(digits) <= maxlen
     count = 0
