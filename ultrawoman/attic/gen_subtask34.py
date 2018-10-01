@@ -52,7 +52,7 @@ elif WIN==0:
     n=random.randint(n_l, n_r)
     R=random.randint(R_l, R_r)
     w=random.randint(w_l, max(w_l, n-w_r))
-    V=random.randint(V_l, min(V_r, n-w))
+    V=random.randint(V_l, min(V_r, n-w-1))
     print(str(n))
     print(str(w)+" "+str(V))
     print(str(R))
