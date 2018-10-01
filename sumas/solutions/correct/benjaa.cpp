@@ -27,14 +27,13 @@ void do_the_thing(string seq, vector<int > index){
     // to flag the end of the string
     vector<long long > nums(index.size() - 1);
     for(int i = 0; i < index.size() - 1; i++){
-        if(index[i+1] - index[i] > 15){
+        if(index[i+1] - index[i] > 9){
             // If the number is bigger than a long long
             nums[i] = -1;
             break;
         }
         nums[i] = stoll(seq.substr(index[i], index[i+1] - index[i]));
     }
-
     while(true){
         long long sum = 0;
         for(int i = 0; i < nums.size() - 1; i++){
@@ -58,9 +57,9 @@ void do_the_thing(string seq, vector<int > index){
                     index[j] = index[j - 1] + 1;
                 // Recompute all the numbers to the right
                 for(int j = i - 1; j < index.size() - 1; j++){
-                    if(index[j+1] - index[j] > 15){
+                    if(index[j+1] - index[j] > 9){
                         // If the number is bigger than a long long
-                        nums[i] = -1;
+                        nums[j] = -1;
                         break;
                     }
                     nums[j] = stoll(seq.substr(index[j], index[j+1] - index[j]));
