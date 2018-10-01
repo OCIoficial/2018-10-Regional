@@ -57,8 +57,8 @@
 [Subtask 4]
   # (0, 1, 2), n_l n_r R_l R_r w_l w_r V_l V_r v_l v_r
   # Use sample data as test
-  4 ; copy statement/sample-1.in
-  4 ; copy statement/sample-2.in
+  4 ; copy attic/manual-1.in
+  4 ; copy attic/manual-2.in
   #Other tests
   4 ; gen_subtask34.py 0
   4 ; gen_subtask34.py 0
