@@ -17,13 +17,13 @@
   1 ; copy statement/sample-1.in
   1 ; copy statement/sample-2.in
   #Other tests
-  1 ; gen_random.py 0 0 100 1000 1 1 2 2 1 1 998
-  1 ; gen_random.py 0 0 10000 1000000 2 2 2 2 1 1 999998
-  1 ; gen_random.py 0 0 1000000 1000000 50000 100000 2 2 1 1 999998
-  1 ; gen_random.py 0 0 100000000000 10000000000000 100000 100000 2 2 1 1 9999999999998
-  1 ; gen_random.py 0 1 100 1000 1 1 2 2 1 1 998
-  1 ; gen_random.py 0 1 10000 1000000 2 2 2 2 1 1 999998
-  1 ; gen_random.py 0 1 1000000 1000000 50000 100000 2 2 1 1 999998
-  1 ; gen_random.py 0 1 100000000000 10000000000000 100000 100000 2 2 1 1 9999999999998
-  1 ; gen_random.py 0 2 10000000 10000000000000 50000 100000 2 2 1 1 9999999999998
-  1 ; gen_random.py 0 2 10000000 10000000000000 50000 100000 2 2 1 1 9999999999998
+  1 ; gen_subtask1.py 0
+  1 ; gen_subtask1.py 0
+  1 ; gen_subtask1.py 0
+  1 ; gen_subtask1.py 0
+  1 ; gen_subtask1.py 1
+  1 ; gen_subtask1.py 1
+  1 ; gen_subtask1.py 1
+  1 ; gen_subtask1.py 1
+  1 ; gen_subtask1.py 2
+  1 ; gen_subtask1.py 2
