@@ -52,6 +52,8 @@ if WIN==0:
 elif WIN==1:
     while i<R:
         wi=random.randint(0, n-2)
+        if wi==w:
+            wi=wi-1
         if wi>w:
             if (wi-w)%2==0:
                 wi=wi+1
