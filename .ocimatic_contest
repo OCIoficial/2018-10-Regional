@@ -1,10 +1,10 @@
 {
     "phase": "Regional",
     "tasks": [
-        "megawoman",
-        "sumas",
         "bus",
         "ocio",
-        "reloj"
+        "megawoman",
+        "reloj",
+        "sumas"
     ]
 }
