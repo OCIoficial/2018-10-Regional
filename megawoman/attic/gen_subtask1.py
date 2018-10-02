@@ -49,7 +49,7 @@ if WIN==0:
         i=i+1
 elif WIN==1:
     while i<R:
-        wi=random.randint(w, n-1)
+        wi=random.randint(w+1, n-1)
         j=random.randint(0, 1)
         if minwi>0 and j==1:
             wi=random.randint(0, minwi-1)
