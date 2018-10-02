@@ -80,9 +80,9 @@ else:
     while i<R:
         vi=random.randint(v_l, v_r)
         wi=random.randint(0, n-2)
-        if V==vi and wi==w and st>1:
+        if wi==w:
            wi=wi+1
-        elif V!=vi:
+        if V!=vi:
             if ((wi-w)%(V-vi)==0):
                 if ((wi-w)/(V-vi)<=0 or (wi-w)/(V-vi)>=st):
                     wi=wi+1
