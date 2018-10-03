@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -23,7 +22,7 @@ int main(int argc, char *argv[]) {
         }
         else {
             long long t = (r - w) / (v - u);
-            if ((r - w) % (v - u) == 0L && t >= 0 && t < ran) {
+            if ((r - w) % (v - u) == 0LL && 0LL <= t && t < ran) {
                 possible = false;
                 break;
             }
@@ -31,4 +30,6 @@ int main(int argc, char *argv[]) {
     }
 
     cout << (possible ? "SI" : "NO") << endl;
+
+    return 0;
 }
