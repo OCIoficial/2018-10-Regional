@@ -48,6 +48,9 @@ if WIN==0:
         print(str(wi)+" "+str(vi))
         i=i+1
 elif WIN==1:
+    if n==10000 and w>=50001 and w<=50100:
+        print("0 "+str(vi))
+        i=i+1
     while i<R:
         wi=random.randint(w+1, n-1)
         j=random.randint(0, 1)
