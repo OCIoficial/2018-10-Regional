@@ -11,7 +11,7 @@ int main()
     for (int i=0;i<R;i++){
         long long wi, vi;
         cin >> wi >> vi;
-        for (int s=0;s<tfinal;s++){
+        for (long long int s=0;s<tfinal;s++){
             if (vi<0 and w+s*v>wi+s*vi){
                 break;
             }
