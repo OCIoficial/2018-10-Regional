@@ -13,7 +13,7 @@ int main()
         cin >> wi >> vi;
         long long V=v-vi;
         long long W=wi-w;
-        long long tfinal=(N-w+V-1)/V;
+        long long tfinal=(N-w+V-1)/f;
         if (V==0){
             if (W==0){
                 cout << "NO\n";return 0;
