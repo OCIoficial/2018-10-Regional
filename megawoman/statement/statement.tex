@@ -47,24 +47,24 @@ de detenerse.
 
 Al comienzo de cada segundo los robots lanzan una bomba en la casilla en la que
 están.
-Si en ese momento Ultra Woman se encuentra dentro de la misma casilla será
+Si en ese momento Mega Woman se encuentra dentro de la misma casilla será
 alcanzada por la bomba y perderá el juego.
 Los robots solo lanzan una bomba al inicio de cada segundo y, por lo tanto,
-Ultra Woman puede pasar por debajo de ellos si lo hace en el momento indicado.
+Mega Woman puede pasar por debajo de ellos si lo hace en el momento indicado.
 
-El objetivo de Ultra Woman es escapar del escenario lográndolo cuando su
+El objetivo de Mega Woman es escapar del escenario lográndolo cuando su
 posición está más a la derecha que la última casilla.
-Dada la posición inicial de Ultra Woman y la de cada uno de los robots, a los
-desarrolladores de Jockeycom les gustaría determinar si es posible para Ultra
+Dada la posición inicial de Mega Woman y la de cada uno de los robots, a los
+desarrolladores de Jockeycom les gustaría determinar si es posible para Mega
 Woman escapar del escenario sin ser alcanzada por una bomba.
 
 La siguiente tabla muestra segundo a segundo un ejemplo de un escenario donde
-Ultra Woman puede escapar del escenario sin ser alcanzada por una bomba.
+Mega Woman puede escapar del escenario sin ser alcanzada por una bomba.
 La flechas indican la velocidad y dirección de cada uno de los personajes.
 
 \begin{tabular}{|A|B|}
 \hline
-En el momento inicial los robots lanzan sus bombas, pero Ultra Woman no
+En el momento inicial los robots lanzan sus bombas, pero Mega Woman no
 es alcanzada por ninguna.
 &
 \begin{tikzpicture}[scale=1.2]
@@ -79,9 +79,9 @@ es alcanzada por ninguna.
 \end{tikzpicture}
 \\
 \hline
-Transcurrido un segundo, tanto Ultra Woman como los robots se han movido la
+Transcurrido un segundo, tanto Mega Woman como los robots se han movido la
 cantidad de casillas correspondientes a su velocidad.
-Adicionalmente todos los robots lanzan su bomba, pero Ultra Woman no es
+Adicionalmente todos los robots lanzan su bomba, pero Mega Woman no es
 alcanzada por ninguna.
 &
 \begin{tikzpicture}[scale=1.2]
@@ -94,8 +94,8 @@ alcanzada por ninguna.
 \end{tikzpicture}
 \\
 \hline
-Al tercer segundo Ultra Woman logra escapar del escenario y por lo tanto gana el juego.
-En este momento no importa las bombas que lancen los robots pues Ultra Woman ya se
+Al tercer segundo Mega Woman logra escapar del escenario y por lo tanto gana el juego.
+En este momento no importa las bombas que lancen los robots pues Mega Woman ya se
 encuentra fuera del escenario.
 &
 \begin{tikzpicture}[scale=1.2]
@@ -113,7 +113,7 @@ encuentra fuera del escenario.
   La primera contiene un entero $N$ ($N>0$), correspondiente a la cantidad de
   casillas en el escenario.
   La siguiente línea contiene dos enteros $w$ y $v$ ($0\leq w< N, 0<v\leq 10^9$)
-  correspondientes a la casilla donde se encuentra inicialmente Ultra Woman y a la
+  correspondientes a la casilla donde se encuentra inicialmente Mega Woman y a la
   velocidad con la que se mueve.
   Posteriormente viene una línea con un entero $R$ ($R>0$) indicando la cantidad de
   robots en el escenario.
@@ -127,16 +127,16 @@ encuentra fuera del escenario.
 
 \begin{outputDescription}
 La salida debe corresponder a una única línea conteniendo la palabra \texttt{SI}
-en el caso que sea posible para Ultra Woman escapar del escenario o \texttt{NO}
+en el caso que sea posible para Mega Woman escapar del escenario o \texttt{NO}
 en caso contrario.
 \end{outputDescription}
 
 \begin{scoreDescription}
-  \score{20} Se probarán varios casos donde la velocidad de Ultra Woman es 1,
+  \score{20} Se probarán varios casos donde la velocidad de Mega Woman es 1,
   todos los robots se mueven hacia la derecha con velocidad 2 y tanto la
   cantidad de casillas como de robots es menor o igual que $10^5$ ($u_i=2, v=1,
   R\leq 10^5, N\leq 10^5$).
-  \score{20} Se probarán varios casos donde la velocidad de Ultra Woman es 1,
+  \score{20} Se probarán varios casos donde la velocidad de Mega Woman es 1,
   todos los robots se mueven hacia la izquierda con velocidad -1 y tanto la cantidad
   de casillas como de robots es menor que $10^5$ ($u_i=-1, v=1, R\leq 10^5,
   N\leq 10^5$).
