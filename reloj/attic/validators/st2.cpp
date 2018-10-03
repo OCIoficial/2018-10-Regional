@@ -15,7 +15,7 @@ int main() {
   registerValidation();
   int M = inf.readInt(1, 100000, "M");
   inf.readSpace();
-  int N = inf.readInt(1, 1000, "N");
+  int N = inf.readInt(1, 2000, "N");
   inf.readEoln();
 
   long long sum = 0LL;
