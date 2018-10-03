@@ -1,6 +1,7 @@
 \documentclass{oci}
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
+\usepackage{tikz}
 
 \title{Reloj inteligente}
 
@@ -32,20 +33,19 @@
 
   Para la suerte de Nicolás el reloj es realmente inteligente y puede
   programarse para añadir nuevas funcionalidades.
-  Lamentablemente, Nicolás es realmente malo programando y necesita de tu ayuda.
+  Lamentablemente Nicolás es realmente malo programando y necesita de tu ayuda.
 
   Internamente, el reloj toma una \emph{muestra} cada segundo y guarda la
   distancia en metros que fue recorrida durante ese segundo.
   Un intervalo corresponde a un conjunto contiguo de muestras.
   Como es posible que los intervalos no sumen exactamente $M$ metros, a
-  Nicolás le interesan los intervalos que sean lo más cercanos posible a $M$
+  Nicolás le interesan los intervalos que sean lo más cercano posible a $M$
   metros.
   Un intervalo \emph{válido} es uno cuya distancia es mayor o igual que $M$ metros,
   tal que al quitarle la muestra de más a la derecha la distancia queda menor
   que $M$ metros.
-  Dada la descripción de las muestras tu tarea es determinar el intervalo
-  válido de menor tiempo.
-
+  Dada la descripción de las muestras tu tarea es determinar el menor tiempo en
+  que Nicolás recorrió un intervalo válido.
 \end{problemDescription}
 
 \begin{inputDescription}
@@ -53,21 +53,21 @@
   ($N > 0$) correspondientes respectivamente al valor que Nicolás ha escogido
   para el desafío y la cantidad de muestras.
   La siguiente línea contiene $N$ enteros correspondientes a la cantidad de
-  metros en cada intervalo.
+  muestras que tomó el reloj.
   Todos los enteros serán mayores o iguales que 0 y menores o iguales que $100$.
 \end{inputDescription}
 
 \begin{outputDescription}
   La salida debe contener un único entero correspondiente al tiempo en segundos
   del intervalo válido de menor tiempo.
-  Se garantiza que habrá al menos un intervalo válido, es decir, la suma de
-  tomas las muestras será mayor o igual que $M$.
+  Se garantiza que habrá al menos un intervalo válido, es decir, la distancia
+  total de todas las muestras será mayor o igual que $M$.
 \end{outputDescription}
 
 \begin{scoreDescription}
-  \score{20} Se probarán varios casos donde $N<=10^2$
-  \score{30} Se probarán varios casos donde $N<=10^3$
-  \score{50} Se probarán varios casos donde $N<=10^6$
+  \score{20} Se probarán varios casos donde $N\leq 10^2$
+  \score{30} Se probarán varios casos donde $N\leq 10^3$
+  \score{50} Se probarán varios casos donde $N\leq 10^6$
 \end{scoreDescription}
 
 \begin{sampleDescription}
