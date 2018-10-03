@@ -38,12 +38,12 @@ plagado de robots bombarderos y así poder salvar a su amigo Uno.
 
 El escenario está compuesto de $N$ casillas numeradas de 0 a $N-1$ y contiene
 $R$ robots numerados de 0 a $R-1$.
-Mega Woman corre siempre hacia la derecha a una velocidad constante de $v$
-casillas por segundo.
+Mega Woman corre siempre hacia la derecha a una velocidad
+constante de $v$ casillas por segundo.
 Cada robot vuela por el escenario en una sola dirección, ya sea izquierda o
 derecha, a una velocidad constante $u_i$.
-El objetivo de Ultra Woman es escapar del escenario lográndolo cuando su
-posición está más a la derecha que la última casilla.
+Tanto los robots como Mega Woman deben moverse todo el tiempo sin la posibilidad
+de detenerse.
 
 Al comienzo de cada segundo los robots lanzan una bomba en la casilla en la que
 están.
@@ -52,6 +52,8 @@ alcanzada por la bomba y perderá el juego.
 Los robots solo lanzan una bomba al inicio de cada segundo y, por lo tanto,
 Ultra Woman puede pasar por debajo de ellos si lo hace en el momento indicado.
 
+El objetivo de Ultra Woman es escapar del escenario lográndolo cuando su
+posición está más a la derecha que la última casilla.
 Dada la posición inicial de Ultra Woman y la de cada uno de los robots, a los
 desarrolladores de Jockeycom les gustaría determinar si es posible para Ultra
 Woman escapar del escenario sin ser alcanzada por una bomba.
