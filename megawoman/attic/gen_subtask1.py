@@ -24,12 +24,16 @@ w_l=int(sys.argv[7])
 #Septimo argumento: Limite superior de w
 w_r=int(sys.argv[8])
 
+#Octavo argmento: poner casos borde
+L=int(sys.argv[9])
+
 vi=2
 V=1
 n=random.randint(n_l, n_r)
 R=random.randint(R_l, R_r)
 w=random.randint(w_l, max(w_l, n-w_r))
-
+if L==1:
+    w=50010
 print(str(n))
 print(str(w)+" "+str(V))
 print(str(R))
@@ -37,6 +41,15 @@ st=n-w
 minwi=w-st+1
 i=0
 if WIN==0:
+    if L==1:
+        looser=int(R/2)
+        while i<R:
+            if i==looser:
+                print("16 "+str(vi))
+                i=i+1
+            wi=random.randint(0, 5)
+            print(str(wi)+" "+str(vi))
+            i=i+1
     looser=random.randint(0, R-1)
     while i<R:
         if looser==i:
@@ -48,9 +61,11 @@ if WIN==0:
         print(str(wi)+" "+str(vi))
         i=i+1
 elif WIN==1:
-    if n==10000 and w>=50001 and w<=50100:
-        print("0 "+str(vi))
-        i=i+1
+    if L==1:
+        while i<R:
+            wi=random.randint(0, 5)
+            print(str(wi)+ "+str(vi))
+            i=i+1
     while i<R:
         wi=random.randint(w+1, n-1)
         j=random.randint(0, 1)
