@@ -24,10 +24,11 @@ int main(){
 	ios_base::sync_with_stdio(0); cin.tie(0);
 	int M; cin >> M;
 	string actual = "1"; // "1" es el string inicial
-	int m_acumulada = 0, ans = 0, len = 1; //len es el tamaño del string actual
-	while(m_acumulada + len <= M){ //mientras quepa un número más, se repite el ciclo
+	actual = siguiente_numero(actual); //primera iteración (siempre se hace, M>0)
+	int m_acumulada = 1, ans = 1, len = 2; //len es el tamaño del string actual
+	while(m_acumulada + len + 1<= M){ //mientras quepa un número más, se repite el ciclo
 		ans++;
-		m_acumulada += len;
+		m_acumulada += len + 1; // +1 por el espacio
 		actual = siguiente_numero(actual);
 		len = actual.length();
 	}
