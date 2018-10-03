@@ -60,7 +60,7 @@ Woman escapar del escenario sin ser alcanzada por una bomba.
 
 La siguiente tabla muestra segundo a segundo un ejemplo de un escenario donde
 Ultra Woman puede escapar del escenario sin ser alcanzada por una bomba.
-La flechas indican la velocidad de cada uno de los personajes.
+La flechas indican la velocidad y dirección de cada uno de los personajes.
 
 \begin{tabular}{|A|B|}
 \hline
@@ -94,7 +94,7 @@ alcanzada por ninguna.
 \end{tikzpicture}
 \\
 \hline
-En el segundo tres Ultra Woman logra escapar del escenario y por lo tanto gana el juego.
+Al tercer segundo Ultra Woman logra escapar del escenario y por lo tanto gana el juego.
 En este momento no importa las bombas que lancen los robots pues Ultra Woman ya se
 encuentra fuera del escenario.
 &
@@ -108,7 +108,6 @@ encuentra fuera del escenario.
 
 \end{problemDescription}
 
-\clearpage
 \begin{inputDescription}
   La entrada está descrita en varias líneas.
   La primera contiene un entero $N$ ($N>0$), correspondiente a la cantidad de
@@ -116,7 +115,7 @@ encuentra fuera del escenario.
   La siguiente línea contiene dos enteros $w$ y $v$ ($0\leq w< N, 0<v\leq 10^9$)
   correspondientes a la casilla donde se encuentra inicialmente Ultra Woman y a la
   velocidad con la que se mueve.
-  Posteriormente viene una línea con un entero $R$ ($R>0$)indicando la cantidad de
+  Posteriormente viene una línea con un entero $R$ ($R>0$) indicando la cantidad de
   robots en el escenario.
   A continuación siguen $R$ filas describiendo cada uno de los robots.
   Cada fila contiene dos enteros $r_i$ y $u_i$ ($0\leq r_i < N, |u_i|< 10^9$),
@@ -138,8 +137,8 @@ en caso contrario.
   cantidad de casillas como de robots es menor o igual que $10^5$ ($u_i=2, v=1,
   R\leq 10^5, N\leq 10^5$).
   \score{20} Se probarán varios casos donde la velocidad de Ultra Woman es 1,
-  todos los robots se mueven hacia la izquierda con velocidad 1 y tanto la cantidad
-  de casillas como de robots es menor que $10^5$ ($u_i=1, v=1, R\leq 10^5,
+  todos los robots se mueven hacia la izquierda con velocidad -1 y tanto la cantidad
+  de casillas como de robots es menor que $10^5$ ($u_i=-1, v=1, R\leq 10^5,
   N\leq 10^5$).
   \score{25} Se probarán varios casos en que el número de robots es menor que
   50, el número de casillas es menor o igual que $10^5$ y sin restricciones sobre las
