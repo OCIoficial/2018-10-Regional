@@ -15,11 +15,11 @@ int main () {
     // t = (r - w)/(v - u)
     int a = r - w;
     int b = v - u;
-    if (b == 0 and v == u) {
+    if (a == 0) {
       cout << "NO\n";
       return 0;
     }
-    if (b !=0 && a % b == 0 && a/b > 0 && a/b < N) {
+    if (b !=0 && a % b == 0 && a/b > 0 && w+v*a/b < N) {
       cout << "NO\n";
       return 0;
     }
