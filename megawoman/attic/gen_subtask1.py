@@ -64,7 +64,7 @@ elif WIN==1:
     if L==1:
         while i<R:
             wi=random.randint(0, 5)
-            print(str(wi)+ "+str(vi))
+            print(str(wi)+" "+str(vi))
             i=i+1
     while i<R:
         wi=random.randint(w+1, n-1)
