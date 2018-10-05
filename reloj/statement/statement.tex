@@ -34,23 +34,51 @@
   programarse para añadir nuevas funcionalidades.
   Lamentablemente, Nicolás es realmente malo programando y necesita de tu ayuda.
 
-  Internamente, el reloj toma una \emph{muestra} cada segundo y guarda la
+  Internamente, el reloj toma una \emph{muestra} cada segundo y registra la
   distancia en metros que fue recorrida durante ese segundo.
-  Un intervalo corresponde a un conjunto contiguo de muestras.
-  Como es posible que los intervalos no sumen exactamente $M$ metros, a
-  Nicolás le interesan los intervalos que sean lo más cercano posible a $M$
-  metros.
-  Un intervalo \emph{válido} es uno cuya distancia es mayor o igual que $M$ metros,
+  Las muestras son guardadas en un arreglo de enteros de tamaño $N$.
+  Un intervalo corresponde a un conjunto consecutivo de muestras y su distancia
+  a la suma total de todas las muestras en él.
+  Como es posible que la distancia de los intervalos no sea exactamente $M$,
+  a Nicolás le interesan los intervalos que sean lo más cercano posible a $M$.
+  Un \emph{intervalo válido} es uno cuya distancia es mayor o igual que $M$,
   tal que al quitarle la muestra de más a la derecha la distancia queda menor
-  que $M$ metros.
+  que $M$.
   Dada la descripción de las muestras tu tarea es determinar el menor tiempo en
   que Nicolás recorrió un intervalo válido.
+
+  La siguiente figura contiene un ejemplo para un arreglo de muestras de tamaño
+  $7$.
+  Si $M=8$, algunos intervalos válidos son el contenido entre las posiciones 1 y
+  4 (distancia $3+2+1+2=8$) y el contenido entre las posiciones 2 y 5 (distancia
+  $2+1+2+4=9$).
+  Por otro lado, el intervalo contenido entre las posiciones 4 y 6, a pesar de
+  tener una distancia mayor que 8, no es válido, pues al sacarle la muestra de más
+  a la derecha su distancia todavía es mayor que 8.
+  Finalmente, el intervalo válido de menor tiempo es el contenido entre las
+  posiciones 4 y 6.
+
+\begin{center}
+	\begin{tikzpicture}[scale = 0.6]
+	\foreach \i in {0,...,6}{
+		\draw (\i,0) rectangle +(1,1);
+		\node at (\i+0.5,-0.3) {\scalebox{0.6}{$\i$}};
+	}
+	\node at (0+0.5,0.5) {$1$};
+	\node at (1+0.5,0.5) {$3$};
+	\node at (2+0.5,0.5) {$2$};
+	\node at (3+0.5,0.5) {$1$};
+	\node at (4+0.5,0.5) {$2$};
+	\node at (5+0.5,0.5) {$4$};
+	\node at (6+0.5,0.5) {$3$};
+	\end{tikzpicture}
+\end{center}
 \end{problemDescription}
 
 \begin{inputDescription}
   La primera línea de la entrada contiene dos enteros $M$ ($0<M\leq 10^5$) y $N$
   ($N > 0$) correspondientes respectivamente al valor que Nicolás ha escogido
-  para el desafío y la cantidad de muestras que tomó el reloj.
+  para el desafío y la cantidad de muestras que registró el reloj.
   La siguiente línea contiene $N$ enteros mayores o iguales que 0 y menores o
   iguales que 100, correspondientes a la cantidad de metros recorridos en cada
   muestra.
@@ -60,7 +88,7 @@
   La salida debe contener un único entero correspondiente al tiempo en segundos
   del intervalo válido de menor tiempo.
   Se garantiza que habrá al menos un intervalo válido, es decir, la distancia
-  total de todas las muestras será mayor o igual que $M$.
+  del intervalo formado por todas las muestras será mayor o igual que $M$.
 \end{outputDescription}
 
 \begin{scoreDescription}
@@ -72,6 +100,7 @@
 \begin{sampleDescription}
 \sampleIO{sample-1}
 \sampleIO{sample-2}
+\sampleIO{sample-3}
 \end{sampleDescription}
 
 \end{document}
